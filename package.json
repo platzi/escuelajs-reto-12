@@ -9,7 +9,9 @@
     "server": "json-server src/server.json",
     "start:dev": "npm run server & npm run start",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
-    "lint": "eslint src/ --fix"
+    "lint": "eslint src/ --fix",
+    "test" : "jest",
+    "test:watch":"jest --watch"
   },
   "keywords": [
     "react",
