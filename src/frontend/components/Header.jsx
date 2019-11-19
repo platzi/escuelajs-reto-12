@@ -11,9 +11,7 @@ const Header = props => (
     <div className="Header-checkout">
       <Link to="/checkout">
         <i className="fas fa-shopping-basket" />
-        {props.cart.length > 0 && (
-          <div className="Header-alert">{props.cart.length}</div>
-        )}
+        {props.cart > 0 && <div className="Header-alert">{props.cart}</div>}
       </Link>
     </div>
   </div>
@@ -21,7 +19,7 @@ const Header = props => (
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart,
+    cart: state.cart.length,
   };
 };
 
