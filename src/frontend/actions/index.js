@@ -5,6 +5,14 @@ const addToCart = payload => ({
   payload,
 });
 
+const removeToCart = (item, key) => ({
+  type: 'REMOVE_TO_CART',
+  payload: {
+    item,
+    key,
+  },
+});
+
 const setProducts = payload => ({
   type: 'SET_PRODUCTS',
   payload,
@@ -23,4 +31,4 @@ const getProductsRequest = payload => (dispatch) => {
     .catch(error => dispatch(setProductsError(error)));
 };
 
-export { addToCart, getProductsRequest };
+export { addToCart, getProductsRequest, removeToCart };

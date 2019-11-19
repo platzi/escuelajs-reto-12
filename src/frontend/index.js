@@ -15,6 +15,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const initialState = {
+  total_price: 0,
   cart: [],
   products: [],
 };
