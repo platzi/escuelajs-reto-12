@@ -13,7 +13,7 @@ const Checkout = (props) => {
             <div className="Checkout-element">
               <h4>{item.title}</h4>
               <span>
-                $
+$
                 {item.price}
               </span>
             </div>

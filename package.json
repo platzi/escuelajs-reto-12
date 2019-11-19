@@ -9,7 +9,10 @@
     "server": "json-server src/server.json",
     "start:dev": "npm run server & npm run start",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
-    "lint": "eslint src/ --fix"
+    "lint": "eslint src/ --fix",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "react",
@@ -24,14 +27,21 @@
     "@babel/preset-react": "^7.6.3",
     "@babel/register": "^7.6.2",
     "axios": "^0.19.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "dotenv": "^8.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "express": "^4.17.1",
+    "history": "^4.10.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "ignore-styles": "^5.0.1",
+    "jest": "^24.9.0",
+    "jest-config": "^24.9.0",
+    "jest-css-modules-transform": "^3.1.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.15",
@@ -39,6 +49,8 @@
     "react-router": "^5.0.1",
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",
+    "react-test-render": "^1.1.2",
+    "react-test-renderer": "^16.11.0",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.41.2",
@@ -57,6 +69,8 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "husky": "^2.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-css-modules": "^2.1.0",
     "lint-staged": "^8.2.1",
     "mini-css-extract-plugin": "^0.7.0",
     "nodemon": "^1.19.4",
@@ -81,5 +95,11 @@
   "engines": {
     "node": "^8 || ^10",
     "npm": "6.x"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/src/frontend/__mocks__/fileMock.js",
+      "\\.(scss|css|styl)$": "identity-obj-proxy"
+    }
   }
 }
