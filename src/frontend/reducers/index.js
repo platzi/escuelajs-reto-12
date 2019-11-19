@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
       };
     case 'SET_PRODUCTS': {
       if (action.error) {
-        return;
+        return 0;
       }
       return {
         ...state,

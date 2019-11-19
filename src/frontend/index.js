@@ -13,15 +13,11 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   enhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 }
-
-const initialState = {
-  cart: [],
-  products: [],
-};
+const preloadedState = window.__PRELOADED_STATE__;
 
 const store = createStore(
   reducer,
-  initialState,
+  preloadedState,
   enhancer(applyMiddleware(thunk)),
 );
 

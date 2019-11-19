@@ -11,7 +11,6 @@ const Products = (props) => {
   useEffect(() => {
     getProductsRequest();
   }, []);
-
   return (
     <div className="Products">
       <div className="Products-items">
