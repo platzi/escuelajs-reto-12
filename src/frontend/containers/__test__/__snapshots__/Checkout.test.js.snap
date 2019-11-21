@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout component Match Snapshot 1`] = `
+<div
+  className="Checkout"
+>
+  <div
+    className="Checkout-content"
+  >
+    <h2>
+      Sin Pedidos
+    </h2>
+  </div>
+</div>
+`;

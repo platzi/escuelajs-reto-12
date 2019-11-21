@@ -23,4 +23,4 @@ const getProductsRequest = payload => (dispatch) => {
     .catch(error => dispatch(setProductsError(error)));
 };
 
-export { addToCart, getProductsRequest };
+export { addToCart, getProductsRequest, setProducts };
